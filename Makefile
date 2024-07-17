@@ -6,7 +6,9 @@ build:
 generate:
 	go generate ./...
 test:
-	go test ./...
+	go test -coverprofile=coverage.out ./...
+deps:
+	go mod download
 
 .PHONY: check
 check:
