@@ -7,6 +7,7 @@ generate:
 	go generate ./...
 test:
 	go test -coverprofile=coverage.out ./...
+	go tool cover -func=coverage.out
 deps:
 	go mod download
 
